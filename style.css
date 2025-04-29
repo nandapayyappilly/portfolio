@@ -148,3 +148,123 @@ select {
   grid-row: 2;
   margin: 0;
 }
+
+.project-info {
+  font-family: system-ui, serif; /* includes Baskerville on Mac */
+}
+
+.project-year {
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  margin-top: 1em;
+  padding: 1em;
+  border: 1px solid #ccc;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: var(--color);
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.legend {
+  flex: 1;
+}
+
+.searchBar {
+  width: 100%; /* Adjust width to be responsive */
+  max-width: 1100px; /* Max width to prevent it from getting too wide */
+  padding: 12px; /* Adds padding inside the input */
+  font-size: 18px; /* Makes the font larger */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ccc; /* Light border color */
+  background-color: #f7f7f7; /* Light background color */
+  transition: all 0.3s ease; /* Optional: smooth transition for hover effect */
+  margin-bottom: 30px;
+}
+
+.searchBar:focus {
+  outline: none; /* Removes the default focus outline */
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Optional: adds shadow on focus */
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+path {
+  transition: 300ms;
+}
+
+path {
+  cursor: pointer;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}
+
+.legend {
+  list-style-type: none;
+  padding: 0.5;
+  margin: 0;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.swatch {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  display: inline-block;
+  background-color: var(--color);
+}
+
+.legend li.selected .swatch {
+  background-color: oklch(60% 45% 0); /* or your preferred highlight color */
+}
+
+.selected {
+  --color: #c00000 !important; /* HTML hex equivalent of oklch(60% 45% 0) */
+}
+

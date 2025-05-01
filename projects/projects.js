@@ -16,24 +16,24 @@ searchInput.addEventListener('input', (event) => {
 
 // Apply both year and query filters together
 function applyFilters() {
-  // Step 1: Apply only search filter for pie chart data
+  // Apply only search filter for pie chart data
   const searchFiltered = projects.filter((project) =>
     Object.values(project).join('\n').toLowerCase().includes(query)
   );
 
-  // Step 2: Apply search + year filter for project cards
+  // Apply search + year filter for project cards
   const filteredProjects = searchFiltered.filter((project) => {
     if (selectedIndex === -1) return true;
     const selectedYear = currentData[selectedIndex].label;
     return project.year === selectedYear;
   });
 
-  // Step 3: Update cards and chart
+  // Update cards and chart
   renderProjects(filteredProjects, projectsContainer, 'h2');
-  renderPieChart(searchFiltered); // ✅ Pie chart only needs search filter
+  renderPieChart(searchFiltered);
 }
 
-let currentData = []; // Will hold newData for year filtering
+let currentData = [];
 
 function renderPieChart(projectsGiven) {
   // Aggregate projects by year

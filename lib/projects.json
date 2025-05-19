@@ -1,5 +1,11 @@
 [
     {
+        "title": "Cyclescape: BikeWatching Visualization",
+        "year": "2025",
+        "image": "../assets/bike_watching.png",
+        "description": "An interactive map visualization on Boston's and Cambridge's bike traffic."
+    },
+    {
         "title": "Breakfast Cereal Sugar Visualization",
         "year": "2025",
         "image": "https://dsc106.com/labs/lab02/images/empty.svg",
@@ -40,12 +46,6 @@
         "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Aliquid quia sit quasi temporibus fugiat, molestias perspiciatis. Enim, cum sit? Obcaecati sequi eius quibusdam quo, necessitatibus cupiditate reiciendis et id illo accusamus nesciunt laborum! Doloremque esse alias unde aperiam."
-    },
-    {
-        "title": "Quos reiciendis architecto assumenda?",
-        "year": "2022",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Quo ea exercitationem cumque reiciendis, doloremque, deserunt neque sunt beatae nesciunt in praesentium fugit doloribus asperiores odio quisquam provident. Obcaecati dolor esse ut nihil natus quidem, non aliquid officiis temporibus."
     },
     {
         "title": "Omnis recusandae quisquam asperiores.",

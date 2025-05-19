@@ -1,5 +1,3 @@
-console.log('IT’S ALIVE!');
-
 function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
@@ -116,7 +114,7 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
     const article = document.createElement('article');
     article.innerHTML = `
       <${headingLevel}>${pro.title}</${headingLevel}>
-      <img src="${pro.image}" alt="${pro.title}">
+      <img src="${pro.image}" alt="${pro.title} "width="300" height="150">
       <div class="project-info">
         <p>${pro.description}</p>
         <p class="project-year">c. ${pro.year}</p>

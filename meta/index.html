@@ -11,11 +11,9 @@
 
   <h1>Meta</h1>
   <div id="filter-controls" style="display: flex; flex-direction: column; gap: 0.5rem; width: 100%; margin-bottom: 1rem;">
-    <label for="commitSlider" style="width: 100%;">
-      <span style="font-weight: 500;">Show commits until:</span>
     </label>
-    <dl class="files"></dl>
-  </div>
+<!--     <dl class="files"></dl>
+ -->  </div>
   <div id="stats"></div>
   <script type="module" src="main.js"></script>
   <h2>Commits by time of day</h2>
@@ -26,14 +24,6 @@
       <div id="items-container"></div>
     </div>
     <div id="chart"></div>
-  </div>
-  <h2>Lines Edited by time of day</h2>
-  <!-- Scrolly 2: Lines Timeline -->
-  <div id="scrollyfiles">
-    <div id="files-scroll-container">
-      <div id="files-spacer"></div>
-      <div id="files-items-container"></div>
-    </div>
   </div>
   <dl id="commit-tooltip" class="info tooltip">
     <dt>Commit</dt>
@@ -57,5 +47,14 @@
   <p id="selection-count">No commits selected</p>
   
   <dl id="language-breakdown" class="stats"></dl>
+  <h2>Lines Edited by time of day</h2>
+  <!-- Scrolly 2: Lines Timeline -->
+  <div id="scrollyfiles">
+    <div id="files-scroll-container">
+      <div id="files-spacer"></div>
+      <div id="files-items-container"></div>
+    </div>
+    <div class="files"></div>
+  </div>
 </body>
 </html>

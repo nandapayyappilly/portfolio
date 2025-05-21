@@ -595,7 +595,7 @@ dt small {
   width: 95%;
   height: 350px;
   overflow-y: scroll;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   margin-bottom: 50px;
 }
 
@@ -627,19 +627,22 @@ dt small {
 }
 
 #scrollyfiles {
-  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: subgrid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 1rem; /* Optional: spacing between scroll and chart */
+  align-items: start;
+  margin-bottom: 2rem;
 }
+
 
 /* feel free to play with this to make your scrolly more seemless with your plot */
 #files-scroll-container {
   grid-column: 1;
   position: relative;
-  width: 100%;
+  width: 95%;
   height: 250px;
   overflow-y: auto;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   margin-bottom: 50px;
 }
 

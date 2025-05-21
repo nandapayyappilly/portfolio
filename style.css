@@ -137,11 +137,20 @@ select {
   font-family: inherit;
 }
 
-#profile-stats dl {
+
+/* .stat-block {
+  background: #f9fafb; /* Tailwind's gray-50 */
+  /* padding: 1rem; */
+  /* border: 1px solid #e5e7eb; Tailwind's gray-200 */
+  /* border-radius: 0.5rem; */
+  /* text-align: center; */
+/* } */ */
+
+/* #profile-stats dl {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
-}
+} */
 
 #profile-stats dt {
   grid-row: 1;
@@ -158,8 +167,17 @@ select {
   margin: 0;
   font-size: 2rem;
   font-weight: 450;
+  padding-left: 1.5rem;
   color: #111827; /* Tailwind's gray-900 */
 }
+
+/* #profile-stats .stat-block dd {
+  font-size: 2rem;
+  font-weight: 450;
+  color: #111827; 
+  margin: 0;
+  padding-left: 0.5rem; 
+} */
 
 .project-info {
   font-family: system-ui, serif; /* includes Baskerville on Mac */

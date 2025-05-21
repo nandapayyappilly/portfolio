@@ -50,22 +50,6 @@ function getFilteredCommits() {
   const commitMaxTime = timeScale.invert(commitProgress);
   return commits.filter(d => d.datetime < commitMaxTime);
 }
-
-/* timeScale = d3.scaleTime(
-  [d3.min(commits, (d) => d.datetime), d3.max(commits, (d) => d.datetime)],
-  [0, 100],
-);
-
-
-
-// Handle slider input
-document.getElementById('commitSlider').addEventListener('input', (event) => {
-  commitProgress = +event.target.value;
-  updateCommitTimeLabel();
-  // You can re-render or filter the visualization here later
-});
-
-updateCommitTimeLabel(); */
   
 // Function to compute summary stats
 function computeSummaryStats(data, commits) {
@@ -404,8 +388,8 @@ let F_ITEM_HEIGHT = 30; // Feel free to change
 let F_VISIBLE_COUNT = 10; // Feel free to change as well
 let F_totalHeight = (F_NUM_ITEMS - 1) * F_ITEM_HEIGHT;
 const F_scrollContainer = d3.select('#files-scroll-container');
-const F_spacer = d3.select('#files-spacer');
-F_spacer.style('height', `${F_totalHeight}px`);
+//const F_spacer = d3.select('#files-spacer');
+//F_spacer.style('height', `${F_totalHeight}px`);
 const F_itemsContainer = d3.select('#files-items-container');
 F_scrollContainer.on('scroll', () => {
   const F_scrollTop = F_scrollContainer.property('scrollTop');
@@ -439,8 +423,10 @@ function renderFiles(F_startIndex) {
                   });
                   return `<p>On ${dateStr}, I edited ${d.totalLines} lines across ${numFiles} files.</p>`;
                 })
-                .style('position', 'absolute')
-                .style('top', (_, idx) => `${idx * F_ITEM_HEIGHT}px`);
+                //.style('position', 'absolute')
+                .style('padding', '1rem')
+                .style('text-align', 'center');
+                //.style('top', (_, idx) => `${idx * F_ITEM_HEIGHT}px`);
 }
 
 
@@ -449,7 +435,6 @@ function renderItems(startIndex) {
   itemsContainer.selectAll('div').remove();
   const endIndex = Math.min(startIndex + VISIBLE_COUNT, commits.length);
   let newCommitSlice = commits.slice(startIndex, endIndex);
-  // TODO: how should we update the scatterplot (hint: it's just one function call)
   updateScatterPlot(data, newCommitSlice);
   displayCommitFiles(newCommitSlice);
   //displayCommitFiles();
@@ -477,6 +462,7 @@ function renderItems(startIndex) {
                     </p>`;
                 })
                 .style('position', 'absolute')
+                .style('padding', '1rem')
                 .style('top', (_, idx) => `${idx * ITEM_HEIGHT}px`);
 }
 
@@ -495,12 +481,14 @@ function displayCommitFiles(commitsToUse) {
     .selectAll('div')
     .data(files)
     .enter()
-    .append('div');
+    .append('div')
+    .style('padding', '0.5rem');
   filesContainer
     .append('dt')
     .html(
       (d) => `<code>${d.name}</code><small>${d.lines.length} lines</small>`,
-    );
+    )
+    ;
   filesContainer
     .append('dd')
     .selectAll('div')

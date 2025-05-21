@@ -619,7 +619,7 @@ dt small {
   grid-column: 1;
   position: relative;
   width: 100%;
-  height: 350px;
+  height: 250px;
   overflow-y: auto;
   border: 1px solid #ccc;
   margin-bottom: 50px;
@@ -639,7 +639,9 @@ dt small {
 }
 
 #files-items-container {
-  position: absolute;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   top: 0;
   left: 0;
   width: 100%;

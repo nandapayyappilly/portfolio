@@ -2,14 +2,14 @@
     {
         "title": "Luna: What's Your Sleep Story?",
         "year": "2025",
-        "image": "portfolio/assets/luna.png",
+        "image": "/portfolio/assets/luna.png",
         "description": "An interactive web-based exploration of sleep patterns and physiology, featuring visualizations of heart rate, hormone levels, and individual nightly timelines.",
         "github": "https://jiya-makhija.github.io/luna/"
     }, 
     {
         "title": "Surgery Exploratory Visualization",
         "year": "2025",
-        "image": "portfolio/assets/surgery.png",
+        "image": "/portfolio/assets/surgery.png",
         "description": "An interactive dashboard for visualizing real-time patient vitals during surgery, revealing how physiological signals change across procedures and conditions.",
         "github": "https://jiya-makhija.github.io/Surgery-Exploratory-Visualization/"
 
@@ -17,42 +17,42 @@
     {
         "title": "Cyclescape: BikeWatching Visualization",
         "year": "2025",
-        "image": "portfolio/assets/bike_watching.png",
+        "image": "/portfolio/assets/bike_watching.png",
         "description": "An interactive map visualization on Boston's and Cambridge's bike traffic.",
         "github": "https://nandapayyappilly.github.io/cyclescape/"
     },
     {
       "title": "Persuasive or Deceptive Visualization",
       "year": "2025",
-      "image": "portfolio/assets/persuasive.png",
+      "image": "/portfolio/assets/persuasive.png",
       "description": "An interactive visualization exploring how design choices can either support or challenge a claim about NYPD officer misconduct.",
       "github": "https://nandapayyappilly.github.io/dsc_106_project/"
     },
     {
         "title": "Recipe Cook Time Predictor",
         "year": "2025",
-        "image": "portfolio/assets/cooking.png",
+        "image": "/portfolio/assets/cooking.png",
         "description": "Predicts whether a recipe is long or short to cook using nutrition, calorie data, and preparation steps, through a logistic regression model.",
         "github": "https://nandapayy.github.io/Recipe_Project/"
       },
     {
         "title": "Image Processing App",
         "year": "2024",
-        "image": "portfolio/assets/image.png",
+        "image": "/portfolio/assets/image.png",
         "description": "A basic app that applies grayscale, negative, and rotation transformations and uses KNN to classify images based on their features.",
         "github": "https://github.com/NandaPayy/image_processing"
       },
     {
       "title": "Meteorite Landings Analysis",
       "year": "2023",
-      "image": "portfolio/assets/meteorite.png",
+      "image": "/portfolio/assets/meteorite.png",
       "description": "This project investigates patterns in meteorite landings using a dataset from NASA, computing probabilities, hypothesis testing, and analyzing mass trends over time.",
       "github": "https://github.com/NandaPayy/meteorite_landing"
     },
     {
       "title": "Taylor Swift's Songs Analysis",
       "year": "2023",
-      "image": "portfolio/assets/music.jpg",
+      "image": "/portfolio/assets/music.jpg",
       "description": "This project builds a song recommender, lyric searcher, and word cloud generator using data from Taylor Swift's discography.",
       "github": "https://github.com/NandaPayy/taylor_swift"
     }

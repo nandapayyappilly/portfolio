@@ -114,15 +114,19 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
     const article = document.createElement('article');
     article.innerHTML = `
       <${headingLevel}>${pro.title}</${headingLevel}>
-      <img src="${pro.image}" alt="${pro.title} "width="300" height="150">
+      <img src="${pro.image}" alt="${pro.title}" width="300" height="150">
       <div class="project-info">
         <p>${pro.description}</p>
-        <p class="project-year">c. ${pro.year}</p>
-        </div>
-    ` ;
+        <a href="${pro.github}" target="_blank" class="custom-button">
+          Click here to view on GitHub
+        </a>
+        <p class="project-year mt-2">c. ${pro.year}</p>
+      </div>
+    `;
     containerElement.appendChild(article);
   }
 }
+
 
 export async function fetchGitHubData(username) {
   return fetchJSON(`https://api.github.com/users/${username}`);
